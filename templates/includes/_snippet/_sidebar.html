@@ -1,0 +1,87 @@
+<div class="sidebar">
+    <div class="widget rounded">
+        <div class="widget-about data-bg-image text-center">
+            <img src="{{ STATIC_PREFIX }}img/logo.png" alt="logo" class="mb-4"/>
+            <p class="mb-4">Islam news est une presse en ligne d'information islamique internationale en temps réel basée au centre de la Cote d'Ivoire précisément à Bouaké.</p>
+            <ul class="social-icons list-unstyled list-inline mb-0">
+                {% include "includes/_snippet/_social_icons.html" %}
+            </ul>
+        </div>
+    </div>
+
+    <!-- widget popular posts -->
+    <div class="widget rounded">
+        <div class="widget-header text-center">
+            <h3 class="widget-title">Articles populaires</h3>
+            <img src="{{ STATIC_PREFIX }}img/wave.svg" class="wave" alt="wave"/>
+        </div>
+        <div class="widget-content">
+            <div class="post post-list-sm circle">
+                <div class="thumb circle">
+                    <span class="number">1</span>
+                </div>
+                <div class="details clearfix">
+                    <h6 class="post-title my-0"><a href="#">3 façons simples de rendre votre iPhone plus rapide</a></h6>
+                    <ul class="meta list-inline mt-1 mb-0">
+                        <li class="list-inline-item">29 March 2021</li>
+                    </ul>
+                </div>
+            </div>
+        </div>      
+    </div>
+
+    <!-- widget categories -->
+    <div class="widget rounded">
+        <div class="widget-header text-center">
+            <h3 class="widget-title">Explorer les sujets</h3>
+            <img src="{{ STATIC_PREFIX }}img/wave.svg" class="wave" alt="wave"/>
+        </div>
+        <div class="widget-content">
+            <ul class="list">
+                <li><a href="#">Mode de vie</a><span>(5)</span></li>
+                <li><a href="#">Inspiration</a><span>(2)</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- widget newsletter -->
+    <div class="widget rounded">
+        <div class="widget-header text-center">
+            <h3 class="widget-title">Bulletin</h3>
+            <img src="{{ STATIC_PREFIX }}img/wave.svg" class="wave" alt="wave"/>
+        </div>
+        <div class="widget-content">
+            <span class="newsletter-headline text-center mb-3">Rejoignez 70 000 abonnés !</span>
+            <form>
+                <div class="mb-2">
+                    <input class="form-control w-100 text-center" placeholder="Email address…" type="email">
+                </div>
+                <button class="btn btn-default btn-full" type="submit">S'inscrire</button>
+            </form>
+            <span class="newsletter-privacy text-center mt-3">En vous inscrivant, vous acceptez notre
+
+ <a href="#">Politique de confidentialité</a></span>
+        </div>      
+    </div>
+
+    <!-- widget advertisement -->
+    <div class="widget no-container text-md-center">
+        <span class="ads-title">- Annonce sponsorisée -</span>
+        <a href="#" class="widget-ads">
+            <img src="{{ STATIC_PREFIX }}img/ads/ad-360.png" alt="Advertisement"/> 
+        </a>
+    </div>
+
+    <!-- widget tags -->
+    <div class="widget rounded">
+        <div class="widget-header text-center">
+            <h3 class="widget-title">Nuages ​​de tags</h3>
+            <img src="{{ STATIC_PREFIX }}img/wave.svg" class="wave" alt="wave" />
+        </div>
+
+        <div class="widget-content">
+            <a href="#" class="tag">#Tendance</a>
+            <a href="#" class="tag">#Video</a>
+        </div>      
+    </div>
+</div>

@@ -1,0 +1,40 @@
+{% extends "_base.html" %}
+
+{% block head_title %} {{  page_title|capfirst }} {% endblock head_title %}
+
+{% block page_content %}
+    {% block hero_carousel %}
+        <section class="hero-carousel">
+            <div class="row post-carousel-featured post-carousel">
+                {% for post in latest_posts %}
+                    {% include "includes/_snippet/_post_recently.html" with post=post %}  
+                {% endfor %}
+            </div>
+        </section>
+    {% endblock hero_carousel %}
+
+    <section class="main-content mt-3">
+        <div class="container-xl">
+
+            {% block breacrumb %}{% endblock breacrumb %}
+
+            <div class="row gy-4">
+                <section class="col-lg-8">
+                    {% block blog_content %}
+                        <div class="row gy-4">
+                            {% for post in posts_all %} 
+                                {% include 'includes/_snippet/_post.html' with post=post %}
+                            {% endfor %}
+                        </div>
+                    {% endblock blog_content %}
+                </section>
+
+                <section class="col-lg-4">
+                    {% block sidebar %}
+                        {% include 'includes/_snippet/_sidebar.html' %}
+                    {% endblock sidebar %}
+                </section>
+            </div>
+        </div>
+    </section>
+{% endblock page_content %}

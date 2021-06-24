@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+pillow = "*"
+python-decouple = "*"
+whitenoise = {extras = ["brotli"], version = "*"}
+gunicorn = "*"
+django-3-jet = "*"
+django-ckeditor = "*"
+
+[dev-packages]
+flake8 = "*"
+
+[requires]
+python_version = "3.8"

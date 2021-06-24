@@ -1,0 +1,54 @@
+{% extends "index.html" %}
+
+{% block hero_carousel %}{% endblock hero_carousel %}
+
+{% block breacrumb %}
+     {% url "home" as home_url %}
+     {% url "blog:post_list" as blog_post_list %}
+
+     <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+               <li class="breadcrumb-item"><a href="{{ home_url }}">Accueil</a></li>
+               <li class="breadcrumb-item active" aria-current="page">{{ object.post_title }}</li>
+          </ol>
+     </nav>
+{% endblock breacrumb %}
+
+{% block blog_content %}
+     <div class="post post-single">
+
+          <div class="post-header">
+               <h1 class="title mt-0 mb-3">{{ post.post_title|capfirst }}</h1>
+               <ul class="meta list-inline mb-0">
+                    <li class="list-inline-item">
+                         Publié il y a
+                    </li>
+                    <li class="list-inline-item"><a href="#">{{ post.get_post_category_display }}</a></li>
+                    <li class="list-inline-item">{{ post.post_date_created|timesince }}</li>
+               </ul>
+          </div>
+
+          <div class="featured-image">
+               <img src="{{ post.post_cover.url }}" alt="{{ post.post_title }}"/>
+          </div>
+
+          <div class="post-content clearfix">
+               {{ post.post_content|safe }}
+          </div>
+
+          <div class="post-bottom">
+               <div class="row d-flex align-items-center">
+                    <div class="col-md-6 col-12 text-center text-md-start">
+                         <a href="#" class="tag">#Trending</a>
+                         <a href="#" class="tag">#Video</a>
+                         <a href="#" class="tag">#Featured</a>
+                    </div>
+                    <div class="col-md-6 col-12">
+                         <ul class="social-icons list-unstyled list-inline mb-0 float-md-end">
+                              {% include "includes/_snippet/_social_icons.html" %}
+                         </ul>
+                    </div>
+               </div>
+          </div>
+     </div>
+{% endblock blog_content %}

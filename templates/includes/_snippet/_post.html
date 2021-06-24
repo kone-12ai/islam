@@ -1,0 +1,39 @@
+<article class="col-sm-6">
+    <div class="post post-grid rounded bordered">
+        <div class="thumb top-rounded">
+            <a href="{{ post.get_absolute_url }}" class="category-badge position-absolute">
+            {{ post.get_post_category_display }}</a>
+                        
+            <a href="{{ post.get_absolute_url }}">
+                <div class="inner">
+                    <img lazy="true" src="{{ post.post_cover.url }}" alt="{{ post.post_title }}"/>
+                </div>
+            </a>
+        </div>
+
+        <div class="details">
+            <ul class="meta list-inline mb-0">
+                <li class="list-inline-item">{{ post.post_date_created|timesince }}</li>
+                 <li class="list-inline-item">Publié il y à</li>
+            </ul>
+            <h5 class="post-title mb-3 mt-3">
+                <a href="{{ post.get_absolute_url }}">{{ post.post_title|capfirst }}</a>
+            </h5>
+            <p class="excerpt mb-0">
+                {{ post.post_content_excerpt|safe }}
+            </p>
+        </div>
+
+        <div class="post-bottom clearfix d-flex align-items-center">
+            <div class="social-share me-auto">
+                <button class="toggle-button icon-share"></button>
+                <ul class="icons list-unstyled list-inline mb-0">
+                    {% include "includes/_snippet/_social_icons.html" %}
+                </ul>
+            </div>
+            <div class="more-button float-end">
+                <a href="#"><span class="icon-options"></span></a>
+            </div>
+        </div>
+    </div>
+</article>

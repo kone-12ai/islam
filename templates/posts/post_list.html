@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+
+{% block hero_carousel %}{% endblock hero_carousel %}
+
+{% block blog_content %}
+    
+    {% for post in post_list %}
+        {% include 'includes/_snippet/_post.html' with post=post %}
+    {% endfor %}
+
+{% endblock blog_content %}

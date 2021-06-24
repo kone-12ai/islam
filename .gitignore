@@ -1,0 +1,8 @@
+.git
+.env
+.idea/*
+*.lock
+*.sqlite3
+staticfiles
+__pycache__
+media

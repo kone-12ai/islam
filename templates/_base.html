@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        {% load static %}{% get_static_prefix as STATIC_PREFIX %}
+        {% include "includes/_part_meta.html" %}
+        {% include "includes/_part_stylesheet.html" %}
+
+        <title>
+            {% block head_title %}
+                {% ifequal page_title 'page_title' %}
+                    {{ page_title|capfirst }}
+                {% else %}
+                    {{ site_description|capfirst }}
+                {% endifequal %}
+            {% endblock head_title %} &smid; {{ site_title|upper }}
+        </title>
+    </head>
+
+    <body class="d-flex flex-column h-100">
+        <div class="site-wrapper">
+            <div class="main-overlay"></div>
+            {% block navigation %}
+                {% include "includes/_part_navigation.html" %}
+            {% endblock navigation %}
+
+            <main class="page-content">
+                {% block page_content %}
+                    {% comment %} page content here {% endcomment %}
+                {% endblock page_content %}
+            </main>
+
+            {% block footer %}{% include "includes/_part_footer.html" %}{% endblock footer %}
+        </div>
+        {% include "includes/_snippet/_popup.html" %}
+        {% include "includes/_part_javascript.html" %}
+
+        {% comment %} ajax query {% endcomment %}
+        {% block ajax_javascript %}{% endblock ajax_javascript %}
+    </body>
+</html>

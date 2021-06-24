@@ -1,0 +1,19 @@
+[
+{
+    "model": "blog.post",
+    "pk": 1,
+    "fields": {
+        "uuid": "c42178ba-ea39-4971-b973-6caeeba46b32",
+        "post_category": "SPORT",
+        "post_title": "3 Easy Ways To Make Your iPhone Faster",
+        "post_content": "The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words.\r\n\r\nEveryone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words.\r\n\r\nThe European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words.\r\n\r\nEveryone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words.\r\n\r\nThe European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words.\r\n\r\nEveryone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words.",
+        "post_keyword": "sport",
+        "post_cover": "post/image/post-lg-3.jpg",
+        "post_viewed": 0,
+        "post_activated": true,
+        "post_date_created": "2021-05-16T19:13:14.027Z",
+        "post_status": "PUBLISHED",
+        "slug": "3-easy-ways-to-make-your-iphone-faster"
+    }
+}
+]

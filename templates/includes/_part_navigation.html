@@ -1,0 +1,87 @@
+{% comment %} content for menu navigation {% endcomment %}
+
+{% url "home" as home_url %}
+{% url "blog:post_sport_list" as post_sport_list %}
+{% url "blog:post_bknews_list" as post_bknews_list %}
+{% url "blog:post_communique_list" as post_communique_list %}
+{% url "blog:post_international_list" as post_international_list %}
+{% url "blog:post_politique_list" as post_politique_list %}
+{% url "blog:post_religion_list" as post_religion_list %}
+{% url "blog:post_societe_list" as post_societe_list %}
+
+
+
+
+<header class="header-personal">
+    <div class="container-xl header-top">
+        <div class="row align-items-center">
+            <div class="col-4 d-none d-md-block d-lg-block">
+                <ul class="social-icons list-unstyled list-inline mb-0">
+                    {% include "includes/_snippet/_social_icons.html" %}
+                </ul>
+            </div>
+
+            <div class="col-md-4 col-sm-12 col-xs-12 text-center">
+                <a class="navbar-brand" href="{{ home_url }}">
+                    <img lazy='true' src="{{ STATIC_PREFIX }}img/logo.png" alt="logo-{{ site_title }}"/>
+                </a>
+                <a href="{{ home_url }}" class="d-block text-logo">{{ site_title }}<span class="dot">.</span></a>
+                <span class="slogan d-block">La vision islamique sur l'actualité international 24h/24</span>
+            </div>
+
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="header-buttons float-md-end mt-4 mt-md-0">
+                    <button class="search icon-button">
+                        <i class="icon-magnifier"></i>
+                    </button>
+                    <button class="burger-menu icon-button ms-2 float-end float-md-none">
+                        <span class="burger-icon"></span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-xl">
+            <div class="collapse navbar-collapse justify-content-center centered-nav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="{{ home_url }}">acceuil</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="{{ post_sport_list }}">cote d ivoire</a>
+                        </li>
+
+                        <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="{{ post_religion_list }}">afrique</a>
+                    </li>
+
+                     <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="{{ post_politique_list }}">europe</a>
+                        
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="{{ post_bknews_list }}">Amerique</a>
+                    </li>
+                     </li>
+                    
+
+                     <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="{{ post_communique_list }}">asie</a>
+                          </li>  
+
+                   <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="{{ post_international_list }}">oceanie</a>
+                        
+                    </li>                    
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="#">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

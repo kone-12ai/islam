@@ -1,0 +1,35 @@
+{% url "home" as home_url %}
+{% url "blog:post_list" as blog_post_list %}
+
+<div class="search-popup">
+    <button type="button" class="btn-close" aria-label="Close"></button>
+    <div class="search-content">
+        <div class="text-center">
+            <h3 class="mb-4 mt-0">Appuyez sur ESC pour fermer</h3>
+        </div>
+
+        <form class="d-flex search-form">
+            <input class="form-control me-2" type="search" placeholder="Search and press enter ..." aria-label="Search">
+            <button class="btn btn-default btn-lg" type="submit"><i class="icon-magnifier"></i></button>
+        </form>
+    </div>
+</div>
+
+<div class="canvas-menu d-flex align-items-end flex-column">
+    <button type="button" class="btn-close" aria-label="Close"></button>
+
+    <div class="logo">
+        <img lazy='true' src="{{ STATIC_PREFIX }}img/logo.png" alt="logo-{{ site_title }}"/>
+    </div>
+
+    <nav>
+        <ul class="vertical-menu">
+            <li class="active"><a href="{{ home_url }}">Acceuil</a></li>
+            
+        </ul>
+    </nav>
+
+    <ul class="social-icons list-unstyled list-inline mb-0 mt-auto w-100">
+        {% include "includes/_snippet/_social_icons.html" %}
+    </ul>
+</div>
